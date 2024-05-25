@@ -1,8 +1,37 @@
-# React + Vite
+# Ecommerce con React Js!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Curso: ReactJS (2024)
+- Autor: Jose Nicolas
+- Fecha: 24/05/2024
 
-Currently, two official plugins are available:
+## Deploy
+- Repo: https://github.com/jnicolast/eCommerce-react
+- [Deploy en Vercel](https://e-commerce-react-rust.vercel.app/) 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Creado con
+
+- React Js
+- Notificaciones: [SweetAlert2](https://sweetalert2.github.io/)
+- Base de Datos: [Firebase](https://firebase.google.com/?hl=es)
+- Build Tool: [Vite](https://vitejs.dev/)
+
+## Pre-requerimientos
+
+Este proyecto usa npm para la instalación de dependencias, por lo que si no tienes instalado el paquete npm, debes instalarlo antes de continuar.
+````
+npm install -g npm
+````
+
+## 🏃 Correr el proyecto localmente
+Clonar el proyecto:
+````
+git clone https://github.com/jnicolast/eCommerce-react.git
+````
+Instalar las dependencias:
+````
+npm install
+````
+Correr el servidor:
+````
+npm run dev
+````

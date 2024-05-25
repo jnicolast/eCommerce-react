@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
     return (
-        <div className="navbar-container" role="navigation">            
+        <div className="navbar-container" role="navigation">
             <div className="burger-menu">
-                <Link to="/"><img src="src\assets\logo.jpg" style={{ width: '60px' }} /></Link>               
+                <Link to="/"><span className="logo">J Store</span></Link>
             </div>
             <nav>
                 <Link to="/category/smartphones">Smartphones</Link>

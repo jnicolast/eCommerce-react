@@ -7,42 +7,37 @@ import { useEffect, useState } from 'react';
 
 function ItemDetail({ item }) {
     const [galleryImages, setGalleryImages] = useState([])
-   
-      useEffect(()=>{
-        if(item?.images?.length > 0)
-        {            
+
+    useEffect(() => {
+        if (item?.images?.length > 0) {
             const gallery = item.images.map(image => {
-                return {original: image, thumbnail: image, originalHeight:"400px" }
+                return { original: image, thumbnail: image, originalHeight: "400px" }
             })
-            
+
             setGalleryImages(gallery);
         }
-        
-      },[item])
+
+    }, [item])
     return (
         <>
             <div className="imgBx">
                 <ImageGallery items={galleryImages}
-                showPlayButton={false}
-                showFullscreenButton={false}                
-                />                
+                    showPlayButton={false}
+                    showFullscreenButton={false}
+                />
             </div>
             <div className="description">
-                <h2 style={{ textTransform: "uppercase", marginBottom: "10px" }}>{item.brand}</h2>
-                
-                <h3 style={{ marginTop: "0px" }}>{item.title}</h3>
+                <h2 className="brand">{item.brand}</h2>
+                <h3 className="title">{item.title}</h3>
                 <Stack spacing={1}>
                     <Rating name="half-rating-read" value={item?.rating ?? 0} precision={0.1} readOnly />
                 </Stack>
-                <p className='stock'>{`Disponible más de ${item.stock} unidades`}</p>
+                <p className="stock">{`Disponible más de ${item.stock} unidades`}</p>
                 <h2>${item.price}</h2>
                 <div className="actionCart">
-                    <ItemCount />
-                    <button className="addCart">
-                        <span>Agregar al carrito</span>
-                    </button>
+                    <ItemCount item={item} />
                 </div>
-                <p className='description-product'>{item.description}</p>
+                <p className="description-product">{item.description}</p>
             </div>
         </>
     );
